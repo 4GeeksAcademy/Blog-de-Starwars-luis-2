@@ -6,10 +6,10 @@ const Card = ({ item, type }) => {
     const { actions, store } = useContext(Context);
     const navigate = useNavigate();
 
-    // Obtener uid correctamente
+    
     const uid = item.uid || item.result?.uid;
 
-    // Verificar si ya es favorito
+   
     const isFavorite = store.favorites[type].some(fav => fav.uid === uid);
 
     return (
